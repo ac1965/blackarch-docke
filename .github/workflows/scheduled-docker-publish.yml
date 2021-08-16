@@ -2,7 +2,7 @@ name: Docker
 
 on:
   schedule:
-    - cron: '30 22 * * */7'
+    - cron: '30 5 * * */7'
   workflow_dispatch:
 
 env:
