@@ -1,4 +1,4 @@
-FROM blackarchlinux/blackarch:latest
+FROM ac1965/blackarch:latest
 
 # Temporary patch to build on Ubuntu 20.04/10 & GitHub CI
 # https://bugs.archlinux.org/index.php?do=details&task_id=69563
