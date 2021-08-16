@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: blackarchlinux/blackarch:base-devel
+      image: ac1965/blackarch:base-devel
 
     steps:
       - uses: actions/checkout@v2
