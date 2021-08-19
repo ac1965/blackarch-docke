@@ -61,8 +61,8 @@ $(OUTPUTDIR)/Dockerfile.base-devel: $(OUTPUTDIR)/blackarch-base-devel.tar.xz
 
 .PHONY: docker-blackarch-base
 blackarch-base: $(OUTPUTDIR)/Dockerfile.base
-	docker build -f $(OUTPUTDIR)/Dockerfile.blackarch-base -t ac1965/blackarch:base $(OUTPUTDIR)
+	docker build -f $(OUTPUTDIR)/Dockerfile.blackarch-base -t blackarchlinux/blackarch:base $(OUTPUTDIR)
 
 .PHONY: docker-blackarch-base-devel
 blackarch-base-devel: $(OUTPUTDIR)/Dockerfile.base-devel
-	docker build -f $(OUTPUTDIR)/Dockerfile.blackarch-base-devel -t ac1965/blackarch:base-devel $(OUTPUTDIR)
+	docker build -f $(OUTPUTDIR)/Dockerfile.blackarch-base-devel -t blackarchlinux/blackarch:base-devel $(OUTPUTDIR)

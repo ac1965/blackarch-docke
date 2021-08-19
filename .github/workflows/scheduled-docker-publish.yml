@@ -28,13 +28,13 @@ jobs:
       - name: Build base
         run: |
           make blackarch-base
-          docker tag blackarchlinux/blackarch:base docker.io/ac1965/blackarch:$BASE_IMG
-          docker tag blackarchlinux/blackarch:base docker.io/ac1965/blackarch:$LATEST_IMG
+          docker tag ac1965/blackarch:base docker.io/ac1965/blackarch:$BASE_IMG
+          docker tag ac1965/blackarch:base docker.io/ac1965/blackarch:$LATEST_IMG
 
       - name: Build base-devel
         run: |
           make blackarch-base-devel
-          docker tag blackarchlinux/blackarch:base-devel docker.io/ac1965/blackarch:$BASE_DEVEL_IMG
+          docker tag ac1965/blackarch:base-devel docker.io/ac1965/blackarch:$BASE_DEVEL_IMG
 
       - name: Build novnc
         run: |
@@ -48,7 +48,7 @@ jobs:
 
       - name: Push image
         run: |
-          docker push docker.io/blackarchlinux/blackarch:$NOVNC_IMG
-          docker push docker.io/blackarchlinux/blackarch:$BASE_IMG
-          docker push docker.io/blackarchlinux/blackarch:$BASE_DEVEL_IMG
-          docker push docker.io/blackarchlinux/blackarch:$LATEST_IMG
+          docker push docker.io/ac1965/blackarch:$NOVNC_IMG
+          docker push docker.io/ac1965/blackarch:$BASE_IMG
+          docker push docker.io/ac1965/blackarch:$BASE_DEVEL_IMG
+          docker push docker.io/ac1965/blackarch:$LATEST_IMG
