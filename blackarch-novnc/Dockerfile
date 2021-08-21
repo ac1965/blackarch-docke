@@ -19,7 +19,7 @@ RUN pacman -Syu --noconfirm make && \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
 # add devel tools
-    gdb gdb-peda lib32-gcc-libs strace ltrace nasm \
+    gdb lib32-gcc-libs strace ltrace nasm \
 # add radare2
     radare2 iaito python-r2pipe r2ghidra && \
 # Point wallpaper to the right files
