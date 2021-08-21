@@ -19,9 +19,14 @@ RUN pacman -Syu --noconfirm make && \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
 # add devel tools
-    gdb lib32-gcc-libs strace ltrace nasm \
+    git gdb lib32-gcc-libs strace ltrace nasm \
+# add pwn
+    pwntools patchelf netcat \
 # add radare2
     radare2 iaito python-r2pipe r2ghidra && \
+# add gdb-peda
+    git clone https://github.com/longld/peda.git /root/peda && \
+    git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && cp -f /root/Pwngdb/.gdbinit /root/.gdbinit  && \
 # Point wallpaper to the right files
     sed -i 's/backgrounds\/blackarch.png/blackarch\/wallpaper.png/g' /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml && \
 # Copy BlackArch configs
