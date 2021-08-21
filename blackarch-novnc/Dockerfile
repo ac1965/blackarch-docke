@@ -18,10 +18,10 @@ RUN pacman -Syu --noconfirm make && \
     pacman -Syu --noconfirm --needed openssh vim tmux screen supervisor iw man mlocate pciutils less bash-completion novnc \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
-# add devel
-    lib32-gcc-libs strace nasm \
+# add devel tools
+    gdb gdb-peda lib32-gcc-libs strace ltrace nasm \
 # add radare2
-    iaito python-r2pipe r2ghidra && \
+    radare2 iaito python-r2pipe r2ghidra && \
 # Point wallpaper to the right files
     sed -i 's/backgrounds\/blackarch.png/blackarch\/wallpaper.png/g' /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml && \
 # Copy BlackArch configs

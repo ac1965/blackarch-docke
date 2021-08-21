@@ -29,12 +29,12 @@ jobs:
         run: |
           make blackarch-base
           docker tag ac1965/blackarch:base docker.io/ac1965/blackarch:$BASE_IMG
-          docker tag ac1965/blackarch:base docker.io/ac1965/blackarch:$LATEST_IMG
 
       - name: Build base-devel
         run: |
           make blackarch-base-devel
           docker tag ac1965/blackarch:base-devel docker.io/ac1965/blackarch:$BASE_DEVEL_IMG
+          docker tag ac1965/blackarch:base-devel docker.io/ac1965/blackarch:$LATEST_IMG
 
       - name: Build novnc
         run: |
