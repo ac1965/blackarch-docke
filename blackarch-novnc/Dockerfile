@@ -21,7 +21,7 @@ RUN pacman -Syu --noconfirm make && \
 # add devel tools
     git gdb lib32-gcc-libs strace ltrace nasm \
 # add pwn
-    pwntools patchelf netcat \
+    pwntools patchelf netcat socat \
 # add radare2
     radare2 iaito python-r2pipe r2ghidra && \
 # add gdb-peda
