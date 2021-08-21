@@ -12,11 +12,16 @@ FROM ac1965/blackarch:latest
 #    bsdtar -C / -xvf "$patched_glibc" && \
 
 # hostapd-wpe needs make, but it's not a dep because it's assumed to be installed despite not being a dep
+# @@  xorg-server-xvfb x11vnc xfce4 xfce4-goodies xfce4-power-manager blackarch-config-xfce blackarch-menus blackarch-wallpaper \
 RUN pacman -Syu --noconfirm make && \
     # Install packages
-    pacman -Syu --noconfirm openssh vim tmux screen supervisor iw man mlocate pciutils less bash-completion novnc \
-    xorg-server-xvfb x11vnc xfce4 xfce4-goodies xfce4-power-manager blackarch-config-xfce blackarch-menus blackarch-wallpaper \
-    blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation && \
+    pacman -Syu --noconfirm --needed openssh vim tmux screen supervisor iw man mlocate pciutils less bash-completion novnc \
+    xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
+    blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
+# add devel
+    base-devel lib32-gcc-libs strace nasm \
+# add radare2
+    iaito python-r2pipe r2ghirda && \
 # Point wallpaper to the right files
     sed -i 's/backgrounds\/blackarch.png/blackarch\/wallpaper.png/g' /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml && \
 # Copy BlackArch configs
