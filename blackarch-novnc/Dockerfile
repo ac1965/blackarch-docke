@@ -19,9 +19,9 @@ RUN pacman -Syu --noconfirm make && \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
 # add devel
-    base-devel lib32-gcc-libs strace nasm \
+    lib32-gcc-libs strace nasm \
 # add radare2
-    iaito python-r2pipe r2ghirda && \
+    iaito python-r2pipe r2ghidra && \
 # Point wallpaper to the right files
     sed -i 's/backgrounds\/blackarch.png/blackarch\/wallpaper.png/g' /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml && \
 # Copy BlackArch configs
