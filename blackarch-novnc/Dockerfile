@@ -18,7 +18,7 @@ RUN pacman -Syu --noconfirm make && \
     pacman -Syu --noconfirm --needed openssh vim tmux screen supervisor iw man mlocate pciutils less bash-completion novnc \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
-    sudo ttf-sazanami \
+    sudo ntp ttf-sazanami \
 # add devel tools
     git gdb lib32-gcc-libs strace ltrace nasm \
 # add pwn
