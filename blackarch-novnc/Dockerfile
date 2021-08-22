@@ -41,8 +41,10 @@ EXPOSE 8080/tcp
 ENV DISPLAY=:0
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY timesyncd.conf /etc/system.d/timesyncd.conf
 COPY aslr.sh /root/aslr.sh
 COPY dotvim.tar /root/dotvim.tar
+COPY dot.bashrc /root/.bashrc
 
 WORKDIR /root
 RUN tar xf dotvim.tar && rm -f dotvim.tar
