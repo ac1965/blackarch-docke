@@ -18,7 +18,7 @@ RUN pacman -Syu --noconfirm make && \
     pacman -Syu --noconfirm --needed openssh vim tmux screen supervisor iw man mlocate pciutils less bash-completion novnc \
     xorg-server-xvfb x11vnc xfce4 xfce4-goodies blackarch-config-xfce blackarch-menus blackarch-wallpaper \
     blackarch-config-cursor blackarch-config-icons blackarch-config-zsh ttf-liberation \
-    ttf-sazanami firefox sudo ntp \
+    fcitx-im fcitx-configtool fcitx-mozc ttf-sazanami firefox sudo ntp \
 # add devel tools
     git gdb lib32-gcc-libs strace ltrace nasm \
 # add pwn
@@ -45,6 +45,7 @@ COPY timesyncd.conf /etc/system.d/timesyncd.conf
 COPY aslr.sh /root/aslr.sh
 COPY dotvim.tar /root/dotvim.tar
 COPY dot.bashrc /root/.bashrc
+COPY dot.xprofile /root/.xprofile
 
 WORKDIR /root
 RUN tar xf dotvim.tar && rm -f dotvim.tar
