@@ -41,7 +41,11 @@ EXPOSE 8080/tcp
 ENV DISPLAY=:0
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY aslr.sh /root/aslr.sh
+COPY dotvim.tar /root/dotvim.tar
 
 WORKDIR /root
+RUN tar cf dotvim.tar && rm -f dotvim.tar
+RUN chmod +x aslr.sh
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf", "--pidfile", "/run/supervisord.pid"]
 ENTRYPOINT []
