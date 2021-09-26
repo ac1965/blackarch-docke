@@ -25,8 +25,12 @@ alias shred="shred -zf"
 #alias python="python2"
 alias wget="wget -U 'noleak'"
 alias curl="curl --user-agent 'noleak'"
-alias gcc="gcc -m32 -Wextra -Wno-unused-function -Wno-unused-variable -g -O0 -fno-stack-protector -z execstack"
-alias nasm="nasm -f elf32"
+alias gcc-m32="gcc -m32 -Wextra -Wno-unused-function -Wno-unused-variable -g -O0 -fno-stack-protector -z execstack"
+alias gcc-m64="gcc -m64 -Wextra -Wno-unused-function -Wno-unused-variable -g -O0 -fno-stack-protector -z execstack"
+alias nas-m32="nasm -f elf32"
+alias nas-m64="nasm -f elf64"
+alias nas-m64="nasm -f elf64"
+alias nas-mac64="nasm -f macho64"
 
 # source files
 [ -r /usr/share/bash-completion/completions ] &&
